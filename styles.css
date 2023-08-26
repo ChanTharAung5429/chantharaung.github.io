@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(93, 88, 147);
+    margin: 0; /* Reset default margin */
+}
+
+.container {
+    background-color: rgb(45, 97, 97);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Use min-height to ensure the container takes up at least the viewport height */
+    margin: 0; /* Reset default margin */
+    padding: 20px; /* Add some padding to the container */
+    box-sizing: border-box; /* Include padding and border in total element size */
+}
+
+.musicItem {
+    color: yellow;
+    font-size: 20px;
+    padding: 10px 0px;
+    border-bottom: 1px solid rgb(19, 19, 18);
+    cursor: pointer;
+    user-select: none;
+    width: 100%; /* Make sure the track items span the full width */
+    text-align: center; /* Center the text within the track items */
+}
