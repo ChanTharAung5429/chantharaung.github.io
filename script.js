@@ -70,4 +70,3 @@ toggleButton.addEventListener("click", () => {
 });
 
 updateTrackList();
-
