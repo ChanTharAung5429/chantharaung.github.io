@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">  
-    
-    
-
+    <title>Background Video</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <div class="container">
-       <div class="playlistContainer">
-        <audio src="" controls class="audioTag"> 
-            Your browser does not support the audio element.
-        </audio>
-       
-       </div>
+        <video autoplay muted loop class="backgroundVideo">
+            <source src="backvideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="playlistContainer">
+            <audio src="" controls class="audioTag">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="buttons">
+                <button id="englishBtn" class="button english">Foreginer Song</button>
+                <button id="myanmarBtn" class="button myanmar">Myanmar Song</button>
+            </div>
+            <ul class="playlist"></ul>
+        </div>
     </div>
-<script src="script.js"></script> 
-   
-    
+    <script src="script.js"></script>
 </body>
 </html>
