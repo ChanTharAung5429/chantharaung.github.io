@@ -1,21 +1,92 @@
-body {
-    background-image: url('https://shorturl.at/kVX09');
-    background-size: cover;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    margin: 0;
-    font-family: Arial, sans-serif; /* Add a common font family */
 }
 
 .container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-    padding: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
     box-sizing: border-box;
+}
+
+.backgroundVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.audioTag {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.playlistContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.button {
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 10px;
+    border: none;
+}
+
+.button.english {
+    background-color: transparent;
+    color: red;
+    border: 2px solid red;
+}
+
+.button.myanmar {
+    background-color: transparent;
+    color: yellow;
+    border: 2px solid yellow;
+}
+
+.button.clicked.english {
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+.button.clicked.myanmar {
+    background-color: yellow;
+    color: black;
+    border: none;
+}
+
+.playlist {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
 }
 
 .musicItem {
@@ -29,9 +100,14 @@ body {
     text-align: center;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
     .container {
+        padding: 20px;
+    }
+
+    .audioTag {
+        position: static;
+        width: 100%;
         padding: 10px;
     }
 
@@ -39,4 +115,3 @@ body {
         font-size: 18px;
     }
 }
-
